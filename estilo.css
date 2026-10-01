@@ -1,0 +1,777 @@
+/* =========================================================
+   HUELLITAS COMUNITARIAS - Hoja de estilo única
+   ========================================================= */
+
+/* ---------- VARIABLES DE COLOR ---------- */
+:root {
+    --azul-claro:  #d8ecff;
+    --azul-medio:  #4a90e2;
+    --azul-oscuro: #2b6cb0;
+    --blanco:      #ffffff;
+    --gris-texto:  #333333;
+    --gris-suave:  #f5f9ff;
+}
+
+/* ---------- RESET BÁSICO ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--gris-texto);
+    background-color: var(--blanco);
+    line-height: 1.6;
+}
+
+/* ---------- ENLACES GENERALES ---------- */
+a {
+    color: var(--azul-medio);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff8c42;
+    text-decoration: underline;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco);
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-circular {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--azul-medio);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+    display: block;
+}
+
+.nombre-sitio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+/* ---------- NAVEGACIÓN ---------- */
+.barra-navegacion {
+    display: flex;
+    gap: 15px;
+}
+
+.boton-nav {
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    background-color: var(--azul-claro);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+}
+
+.boton-nav:hover {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.boton-nav.activo {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+/* ---------- Botón especial: "Links para ayudar" ---------- */
+.boton-nav.boton-especial {
+    background-color: transparent;
+    border: none;
+    color: #329cff;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.boton-nav.boton-especial::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 4px;
+    height: 2px;
+    background-color: #66a1ee;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.boton-nav.boton-especial:hover {
+    background-color: transparent;
+    color: #83dcff;
+    text-decoration: none;
+}
+
+.boton-nav.boton-especial:hover::after {
+    transform: scaleX(1);
+}
+
+.boton-nav.boton-especial.activo {
+    background-color: transparent;
+    color: #4a99ce;
+    text-decoration: none;
+}
+
+.boton-nav.boton-especial.activo::after {
+    transform: scaleX(1);
+}
+
+/* =========================================================
+   TÍTULO SECCIÓN
+   ========================================================= */
+.titulo-seccion {
+    text-align: center;
+    padding: 50px 40px 40px;
+    background: linear-gradient(135deg, var(--azul-claro), var(--blanco));
+}
+
+.titulo-seccion h1 {
+    font-size: 2.2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+}
+
+.titulo-seccion > p {
+    font-size: 1.05rem;
+    color: var(--gris-texto);
+    margin-bottom: 25px;
+    text-align: justify;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   BOTONES GLOBALES
+   ========================================================= */
+.boton-principal {
+    display: inline-block;
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.boton-principal:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.boton-secundario {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--azul-medio);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-secundario:hover {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+}
+
+/* =========================================================
+   HERO (INDEX)
+   ========================================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(135deg, var(--azul-claro), var(--blanco));
+    padding: 60px 40px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 2.4rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    color: var(--gris-texto);
+}
+
+.hero-imagen {
+    flex: 1;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   MENSAJE DE CONCIENTIZACIÓN
+   ========================================================= */
+.mensaje {
+    text-align: center;
+    padding: 50px 40px;
+    background-color: var(--gris-suave);
+}
+
+.mensaje h2 {
+    font-size: 1.8rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+
+.mensaje p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+}
+
+/* =========================================================
+   MAIN: ASIDE + CONTENIDO
+   ========================================================= */
+.contenedor-principal {
+    display: flex;
+    gap: 30px;
+    padding: 50px 40px;
+    align-items: stretch;
+}
+
+.barra-lateral {
+    width: 28%;
+    background-color: var(--azul-claro);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+.barra-lateral h3 {
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.barra-lateral li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.barra-lateral.anuncio {
+    padding: 0;
+    overflow: hidden;
+}
+
+.anuncio-unico {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.anuncio-img-full {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+}
+
+.etiqueta-anuncio {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.boton-anuncio {
+    display: block;
+    text-align: center;
+    background-color: var(--azul-claro);
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 12px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.boton-anuncio:hover {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+/* =========================================================
+   COLUMNA CONTENIDO
+   ========================================================= */
+.columna-contenido {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.bloque {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+}
+
+.bloque h2 {
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   GALERÍA (ADOPCIONES)
+   ========================================================= */
+.galeria {
+    width: 72%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    align-content: start;
+}
+
+.ficha {
+    background-color: var(--blanco);
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.12);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ficha:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(74, 144, 226, 0.25);
+}
+
+.foto-mascota {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.foto-mascota:hover {
+    transform: scale(1.03);
+}
+
+.ficha h2 {
+    color: var(--azul-oscuro);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.etiqueta-ficha {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.boton-ficha {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: inherit;
+}
+
+.boton-ficha:hover {
+    background-color: var(--azul-oscuro);
+    transform: scale(1.05);
+}
+
+.info-oculta {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: var(--azul-claro);
+    border-radius: 12px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+}
+
+.info-oculta p {
+    margin-bottom: 6px;
+}
+
+/* =========================================================
+   TARJETAS DONACIÓN
+   ========================================================= */
+.tarjetas-donacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-donacion {
+    background-color: var(--azul-claro);
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-donacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.25);
+}
+
+.icono-donacion {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.tarjeta-donacion h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-donacion p {
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+}
+
+/* =========================================================
+   PASOS
+   ========================================================= */
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.paso {
+    background-color: var(--gris-suave);
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    border-left: 5px solid var(--azul-medio);
+}
+
+.numero-paso {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    font-weight: bold;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.paso p {
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+}
+
+/* =========================================================
+   PUNTO DE ENTREGA
+   ========================================================= */
+.bloque-entrega {
+    background-color: var(--azul-claro);
+    text-align: center;
+}
+
+.bloque-entrega .texto-suave {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    font-size: 0.9rem;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 10px 14px;
+    border: 2px solid var(--azul-claro);
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--azul-medio);
+}
+
+.formulario button {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* =========================================================
+   MENSAJE FINAL
+   ========================================================= */
+.mensaje-final {
+    background: linear-gradient(135deg, var(--azul-claro), var(--blanco));
+    text-align: center;
+    border-left: 6px solid var(--azul-medio);
+}
+
+.mensaje-final p {
+    font-size: 1.05rem;
+    color: var(--gris-texto);
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   CTA (ADOPCIONES)
+   ========================================================= */
+.cta-adopcion {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+    border: 2px dashed var(--azul-medio);
+}
+
+.cta-adopcion h2 {
+    color: var(--azul-oscuro);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.cta-adopcion p {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.cta-adopcion strong {
+    color: var(--azul-oscuro);
+}
+
+/* =========================================================
+   LISTA DE LINKS (LINKS.HTML)
+   ========================================================= */
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.categoria-link {
+    background-color: var(--azul-claro);
+    padding: 22px 25px;
+    border-radius: 18px;
+    border-left: 6px solid var(--azul-medio);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categoria-link:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 18px rgba(74, 144, 226, 0.2);
+}
+
+.categoria-link h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.categoria-link ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categoria-link li {
+    margin-bottom: 8px;
+}
+
+.categoria-link a {
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s, padding-left 0.3s;
+    display: inline-block;
+}
+
+.categoria-link a:hover {
+    color: #ff8c42;
+    padding-left: 6px;
+    text-decoration: underline;
+}
+
+.categoria-link a::before {
+    content: "→ ";
+    color: var(--azul-medio);
+}
+
+.nota-final {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.pie {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.95rem;
+}
+
+.pie p {
+    margin-bottom: 5px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+    .cabecera {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .barra-navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .contenedor-principal {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .barra-lateral,
+    .galeria,
+    .columna-contenido {
+        width: 100%;
+    }
+
+    .anuncio-img-full {
+        max-height: 300px;
+    }
+
+    .titulo-seccion h1 {
+        font-size: 1.6rem;
+    }
+
+    .bloque {
+        padding: 20px;
+    }
+}
