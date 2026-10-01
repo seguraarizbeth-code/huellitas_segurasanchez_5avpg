@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellitas Comunitarias | Donaciones</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="cabecera">
+        <div class="logo">
+            <img src="img/bebes.jpg" alt="Logo Huellitas Comunitarias" class="logo-circular">
+            <span class="nombre-sitio">Huellitas Comunitarias</span>
+        </div>
+
+        <nav class="barra-navegacion">
+            <a href="index.html" class="boton-nav">Inicio</a>
+            <a href="adopciones.html" class="boton-nav">Seccion de Adopcion</a>
+            <a href="donaciones.html" class="boton-nav">Seccion de Suministros</a>
+            <a href="links.html" class="boton-nav boton-especial activo">Links para ayudar</a>
+        </nav>
+    </header>
+
+    <!-- ============ TÍTULO ============ -->
+    <section class="titulo-seccion">
+        <h1>Ayúdanos a seguir dejando huellitas 🐾</h1>
+        <p>
+            Tu ayuda puede convertirse en alimento, refugio y una nueva oportunidad
+            para un animal que lo necesita.
+        </p>
+    </section>
+
+    <!-- ============ MAIN ============ -->
+    <main class="contenedor-principal">
+
+        <aside class="barra-lateral anuncio">
+            <div class="anuncio-unico">
+                <span class="etiqueta-anuncio">Publicidad</span>
+                <img src="img/anuncio3.jpg" alt="Anuncio de hamburguesas" class="anuncio-img-full">
+                <a href="https://kfc.com.mx/" target="_blank" rel="noopener" class="boton-anuncio">
+                    Conoce más aquí →
+                </a>
+            </div>
+        </aside>
+
+        <div class="columna-contenido">
+
+            <!-- ====== TIPOS DE DONACIONES ====== -->
+            <section class="bloque">
+                <h2>¿Qué puedes donar?</h2>
+
+                <div class="tarjetas-donacion">
+                    <article class="tarjeta-donacion">
+                        <img src="img/croquetas.avif" alt="Icono de alimento" class="icono-donacion">
+                        <h3>ALIMENTOS 🥫</h3>
+                        <p>Dona alimento para ayudar a mantener a nuestros animalitos bien alimentados.</p>
+                    </article>
+
+                    <article class="tarjeta-donacion">
+                        <img src="img/sabanas.jpg" alt="Icono de cobijas" class="icono-donacion">
+                        <h3>COBIJAS 🧺</h3>
+                        <p>Las cobijas ayudan a brindarles un espacio cálido, cómodo y protegido.</p>
+                    </article>
+
+                    <article class="tarjeta-donacion">
+                        <img src="img/limpieza.jpg" alt="Icono de artículos de limpieza" class="icono-donacion">
+                        <h3>ARTÍCULOS DE LIMPIEZA 🧹</h3>
+                        <p>Los productos de limpieza nos ayudan a mantener sus espacios seguros y saludables.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ====== CÓMO DONAR ====== -->
+            <section class="bloque">
+                <h2>¿Cómo donar?</h2>
+
+                <div class="pasos">
+                    <div class="paso">
+                        <span class="numero-paso">1</span>
+                        <p>Elige qué quieres donar.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero-paso">2</span>
+                        <p>Contáctanos para conocer los puntos de recepción.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero-paso">3</span>
+                        <p>Entrega tu donación.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero-paso">4</span>
+                        <p>Ayúdanos a cambiar una vida.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== PUNTO DE ENTREGA ====== -->
+            <section class="bloque bloque-entrega">
+                <h2>📍 ¿Dónde puedo llevar mi donación?</h2>
+                <p><strong>En la preparatoria CBTiS 116.</strong></p>
+                <p class="texto-suave">Av. Alejandro Von Humboldt Sn, Nueva Tijuana, 22435 Tijuana, B.C.</p>
+                <p class="texto-suave">Horario: 8am - 3pm</p>
+            </section>
+
+            <!-- ====== FORMULARIO ====== -->
+            <section class="bloque">
+                <h2>📝 Contáctanos</h2>
+
+                <form class="formulario" onsubmit="event.preventDefault(); alert('¡Gracias por querer ayudar! 🐾');">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+                    <label for="donar">¿Qué deseas donar?</label>
+                    <input type="text" id="donar" name="donar" placeholder="Alimentos, cobijas, artículos de limpieza..." required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos cómo quieres ayudar..." required></textarea>
+
+                    <button type="submit" class="boton-principal">Quiero ayudar 🐾</button>
+                </form>
+            </section>
+
+            <!-- ====== MENSAJE FINAL ====== -->
+            <section class="bloque mensaje-final">
+                <p>
+                    No necesitas hacer mucho para cambiar una vida. A veces, una pequeña donación
+                    puede significar alimento, refugio y esperanza para una huellita que lo necesita.
+                </p>
+                <a href="#" class="boton-principal">¡Quiero donar!</a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+        <p>© 2026 Huellitas Comunitarias | Proyecto PAEC</p>
+        <p>📧 contacto: subdireccion@cbtis116.edu.mx | 📍 Boulevard Alejandro Von Humboldt</p>
+    </footer>
+
+</body>
+</html>

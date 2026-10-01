@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellitas Comunitarias | Adopciones</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="cabecera">
+        <div class="logo">
+            <img src="img/bebes.jpg" alt="Logo Huellitas Comunitarias" class="logo-circular">
+            <span class="nombre-sitio">Huellitas Comunitarias</span>
+        </div>
+
+        <nav class="barra-navegacion">
+            <a href="index.html" class="boton-nav">Inicio</a>
+            <a href="adopciones.html" class="boton-nav">Seccion de Adopcion</a>
+            <a href="donaciones.html" class="boton-nav">Seccion de Suministros</a>
+            <a href="links.html" class="boton-nav boton-especial activo">Links para ayudar</a>
+        </nav>
+    </header>
+
+    <!-- ============ TÍTULO + CTA ============ -->
+    <section class="titulo-seccion">
+        <h1>Ellos buscan un hogar 🐾</h1>
+
+        <p>
+            🐾 Dale una oportunidad, cambia una vida. Adoptar un perrito no es solamente llevar
+            un animal a casa, es darle una segunda oportunidad a un ser que necesita amor,
+            cuidado y un hogar. 🐶❤️
+        </p>
+        <p>
+            Detrás de cada mirada hay una historia esperando comenzar de nuevo. Tal vez tú
+            puedas ser el motivo por el que esa historia tenga un final feliz. No compres un
+            amigo, <strong>adopta uno</strong>. Dale un hogar y recibirás a cambio una compañía
+            llena de cariño, lealtad y momentos inolvidables. 🏠🐾
+        </p>
+        <p>
+            <strong>¡Adopta con responsabilidad y deja una huellita de amor! 💕</strong>
+        </p>
+
+        <div class="cta-adopcion">
+            <h2>¿Quieres adoptar? ¡Contáctanos!</h2>
+            <p>Escríbenos al <strong>📞 +52 664 623 3770</strong> o visita nuestro centro de adopción.</p>
+            <a href="donaciones.html" class="boton-principal">¿Cómo ayudar?</a>
+        </div>
+    </section>
+
+    <!-- ============ MAIN: ASIDE + GALERÍA ============ -->
+    <main class="contenedor-principal">
+
+        <aside class="barra-lateral anuncio">
+            <div class="anuncio-unico">
+                <span class="etiqueta-anuncio">Publicidad</span>
+                <img src="img/anuncio.jpg" alt="Anuncio Doritos" class="anuncio-img-full">
+            </div>
+        </aside>
+
+        <section class="galeria">
+
+            <!-- Rocky -->
+            <article class="ficha">
+                <img src="img/Rocky.jpg" alt="Rocky, perrito adoptable" class="foto-mascota">
+                <h2>Rocky</h2>
+                <p class="etiqueta-ficha">Macho · 1 año · Mediano</p>
+                <button class="boton-ficha" onclick="verInfo('rocky')">Ver información</button>
+                <div class="info-oculta" id="rocky">
+                    <p><strong>Rescatado:</strong> Hace 6 meses en la colonia Centro.</p>
+                    <p><strong>Personalidad:</strong> Juguetón, cariñoso y muy fiel.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizado:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Huesos -->
+            <article class="ficha">
+                <img src="img/huesitos.jpg" alt="Huesos, perrito adoptable" class="foto-mascota">
+                <h2>Huesos</h2>
+                <p class="etiqueta-ficha">Macho · 8 meses · Pequeño</p>
+                <button class="boton-ficha" onclick="verInfo('huesos')">Ver información</button>
+                <div class="info-oculta" id="huesos">
+                    <p><strong>Rescatado:</strong> Hace 3 meses, encontrado en un parque.</p>
+                    <p><strong>Personalidad:</strong> Tranquilo, mimoso y algo tímido.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizado:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Max -->
+            <article class="ficha">
+                <img src="img/max.jpg" alt="Max, perrito adoptable" class="foto-mascota">
+                <h2>Max</h2>
+                <p class="etiqueta-ficha">Macho · 3 años · Grande</p>
+                <button class="boton-ficha" onclick="verInfo('max')">Ver información</button>
+                <div class="info-oculta" id="max">
+                    <p><strong>Rescatado:</strong> Hace 1 año, tras un accidente.</p>
+                    <p><strong>Personalidad:</strong> Noble, protector y muy leal.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizado:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Lucas -->
+            <article class="ficha">
+                <img src="img/luquitas.jpg" alt="Lucas, perrito adoptable" class="foto-mascota">
+                <h2>Lucas</h2>
+                <p class="etiqueta-ficha">Macho · 9 meses · Mediano</p>
+                <button class="boton-ficha" onclick="verInfo('lucas')">Ver información</button>
+                <div class="info-oculta" id="lucas">
+                    <p><strong>Rescatado:</strong> Hace 6 meses en la colonia Centro.</p>
+                    <p><strong>Personalidad:</strong> Juguetón, cariñoso y muy fiel.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizado:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Tintilina -->
+            <article class="ficha">
+                <img src="img/tintilina.jpg" alt="Tintilina, gatita adoptable" class="foto-mascota">
+                <h2>Tintilina</h2>
+                <p class="etiqueta-ficha">Hembra · 8 meses · Pequeña</p>
+                <button class="boton-ficha" onclick="verInfo('tintilina')">Ver información</button>
+                <div class="info-oculta" id="tintilina">
+                    <p><strong>Rescatada:</strong> Hace 3 meses, encontrada en un parque.</p>
+                    <p><strong>Personalidad:</strong> Tranquila, mimosa y algo tímida.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizada:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Talia -->
+            <article class="ficha">
+                <img src="img/Talia.jpg" alt="Talia, perrita adoptable" class="foto-mascota">
+                <h2>Talia</h2>
+                <p class="etiqueta-ficha">Hembra · 3 años · Grande</p>
+                <button class="boton-ficha" onclick="verInfo('talia')">Ver información</button>
+                <div class="info-oculta" id="talia">
+                    <p><strong>Rescatada:</strong> Hace 1 año, tras un accidente.</p>
+                    <p><strong>Personalidad:</strong> Noble, protectora y muy leal.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizada:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Lobo -->
+            <article class="ficha">
+                <img src="img/lobito.jpg" alt="Lobo, perrito adoptable" class="foto-mascota">
+                <h2>Lobo</h2>
+                <p class="etiqueta-ficha">Macho · 2 años · Grande</p>
+                <button class="boton-ficha" onclick="verInfo('lobo')">Ver información</button>
+                <div class="info-oculta" id="lobo">
+                    <p><strong>Rescatado:</strong> Hace 6 meses en la colonia Centro.</p>
+                    <p><strong>Personalidad:</strong> Juguetón, cariñoso y muy fiel.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizado:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Luna -->
+            <article class="ficha">
+                <img src="img/lunita.jpg" alt="Luna, perrita adoptable" class="foto-mascota">
+                <h2>Luna</h2>
+                <p class="etiqueta-ficha">Hembra · 8 meses · Pequeña</p>
+                <button class="boton-ficha" onclick="verInfo('luna')">Ver información</button>
+                <div class="info-oculta" id="luna">
+                    <p><strong>Rescatada:</strong> Hace 3 meses, encontrada en un parque.</p>
+                    <p><strong>Personalidad:</strong> Tranquila, mimosa y algo tímida.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizada:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Bigotes -->
+            <article class="ficha">
+                <img src="img/Bigotes.jpg" alt="Bigotes, mascota adoptable" class="foto-mascota">
+                <h2>Bigotes</h2>
+                <p class="etiqueta-ficha">Hembra · 2 años · Grande</p>
+                <button class="boton-ficha" onclick="verInfo('bigotes')">Ver información</button>
+                <div class="info-oculta" id="bigotes">
+                    <p><strong>Rescatado:</strong> Hace 1 año, bajo la lluvia.</p>
+                    <p><strong>Personalidad:</strong> Noble, protector y muy leal.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizado:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Manchitas -->
+            <article class="ficha">
+                <img src="img/manchas.jpg" alt="Manchitas, mascota adoptable" class="foto-mascota">
+                <h2>Manchitas</h2>
+                <p class="etiqueta-ficha">Hembra · 5 meses · Pequeña</p>
+                <button class="boton-ficha" onclick="verInfo('manchitas')">Ver información</button>
+                <div class="info-oculta" id="manchitas">
+                    <p><strong>Rescatada:</strong> Hace 1 año, tras un accidente.</p>
+                    <p><strong>Personalidad:</strong> Noble, protectora y muy leal.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizada:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Luli -->
+            <article class="ficha">
+                <img src="img/luli.jpg" alt="Luli, perrita adoptable" class="foto-mascota">
+                <h2>Luli</h2>
+                <p class="etiqueta-ficha">Hembra · 1 año · Mediana</p>
+                <button class="boton-ficha" onclick="verInfo('luli')">Ver información</button>
+                <div class="info-oculta" id="luli">
+                    <p><strong>Rescatada:</strong> Hace 6 meses en la colonia Centro.</p>
+                    <p><strong>Personalidad:</strong> Juguetona, cariñosa y muy fiel.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizada:</strong> Sí.</p>
+                </div>
+            </article>
+
+            <!-- Chimichurri -->
+            <article class="ficha">
+                <img src="img/chimichurri.jpg" alt="Chimichurri, perrita adoptable" class="foto-mascota">
+                <h2>Chimichurri</h2>
+                <p class="etiqueta-ficha">Hembra · 8 meses · Pequeña</p>
+                <button class="boton-ficha" onclick="verInfo('chimichurri')">Ver información</button>
+                <div class="info-oculta" id="chimichurri">
+                    <p><strong>Rescatada:</strong> Hace 3 meses, encontrada en un parque.</p>
+                    <p><strong>Personalidad:</strong> Tranquila, mimosa y algo tímida.</p>
+                    <p><strong>Vacunas:</strong> Completo esquema aplicado.</p>
+                    <p><strong>Esterilizada:</strong> Sí.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+        <p>© 2026 Huellitas Comunitarias | Proyecto PAEC</p>
+        <p>📧 contacto: subdireccion@cbtis116.edu.mx | 📍 Boulevard Alejandro Von Humboldt</p>
+    </footer>
+
+    <!-- ============ SCRIPT ============ -->
+    <script>
+        function verInfo(id) {
+            const info = document.getElementById(id);
+            if (!info) return;
+            info.style.display = (info.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
